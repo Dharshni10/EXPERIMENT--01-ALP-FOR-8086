@@ -1,13 +1,11 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :Dharshni V M
+Name : Dharshni V M
 
-Roll no: 212223240029
+Roll no : 212223240029
 
-Date of experiment : 20-08-24
-
+Date of experiment : 13-08-2024
 
 ## Aim: 
-
 To Write and execute ALP on fundamental arithmetic and logical operations
 
 ## Components required: 8086  emulator 
@@ -29,14 +27,12 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 
 7.	After running the program, another menu screen will be displayed, where you have the option to “View” symbol table,
+
 8.	 
-
-
 ![image](https://user-images.githubusercontent.com/36288975/189273263-d65baae9-4b8f-4723-afb3-c0ffa4052b04.png)
 
-
-
 9.	Click on emulate to start emulation 
+
 
 ![image](https://user-images.githubusercontent.com/36288975/189273273-9bb36ec1-e2e8-4892-8d35-37707332bfdc.png)
 
@@ -45,72 +41,112 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ![image](https://user-images.githubusercontent.com/36288975/189273277-113a2a33-4a40-4ff8-95a5-ecd3a1f504fe.png)
 
-
 ## Programs for arithmetic  operations
 
 ## Addition  of 8 bit ALP 
-
 ```
-ORG 100h
-MOV ax,11h;
-MOV bx,20h;
-ADD ax,bx;
-HLT
+org 100h
+MOV al,11h;
+MOV bl,20h;
+ADD al,bl;
+MOV [6379h],al;
+ret
 ```
 
 ## Output  
 
-![Add- Output](https://github.com/user-attachments/assets/dc1c2ea8-6941-4fc6-b6ee-4a702eae3824)
+![Output](https://github.com/user-attachments/assets/842f9336-5838-4579-9e0d-40fdfa5480b0)
 
 ## Subtraction   of 8 bit numbers  ALP 
-
 ```
-ORG 100h
-MOV ax,31h;
-MOV bx,20h;
-SUB ax,bx;
-HLT
+org 100h
+MOV al,20h;
+MOV bl,[8778h];
+SUB bl,al;
+MOV [8798h],bl;
+ret
 ```
-
+ 
 ## Output  
 
-![Sub - Output](https://github.com/user-attachments/assets/f6e3adff-f384-4d8d-99a4-c244d25af8e1)
+![output](https://github.com/user-attachments/assets/1544fcc3-61ea-4bf4-8a10-7b743a71a6f2)
 
 ## Multiplication alp 
-
 ```
-ORG 100h
-MOV ax,31h;
-MOV bx,20h;
-MUL bx;
-HLT
+org 100h
+ MOV al,13h;
+ MOV bl,2h;
+ MUL bl;
+ MOV [6063h],bl;
+ ret
 ```
 
- ## Output  
-
-![Mul - Output](https://github.com/user-attachments/assets/06d0d8fa-d3c2-4ac5-b77a-02ee89ea9adf)
+ ## Output 
+ 
+![output](https://github.com/user-attachments/assets/fa42eae2-0cb2-4052-8a41-cd8beb70db54)
 
 ## Division alp 
 
- ```
-ORG 100h
-MOV ax,10h;
-MOV bx,05h;
-DIV bx;
-HLT
+```
+org 100h
+ MOV al,26h;
+ MOV bl,[2369h];
+ DIV bl;
+ MOV [2399h],al;
+ ret
 ```
 
+## OUTPUT
+
+![output](https://github.com/user-attachments/assets/b1f4f6ee-c0c0-452b-adfe-d69272ca93e9)
+
+## Programs For Logical Operators:
+## AND
+```
+org 100h
+mov bx,1000h;
+and bx,1111h;
+mov [0040h+02],bx;
+ret
+```
 ## Output  
 
-![Div - Output](https://github.com/user-attachments/assets/e45c3476-d359-45d8-9e70-7fe28e43cd04)
+![and](https://github.com/user-attachments/assets/9be9f0a0-14d6-4639-b687-8d58a03e69c6)
+
+## OR:
+```
+MOV SI,0532H;
+MOV AX,0A32H;
+MOV BX,0B13H;
+OR AX,BX;
+```
+## Output
+
+![or](https://github.com/user-attachments/assets/4719b951-a4ed-412a-8e20-7420688d933b)
+
+## NOT:
+```
+org 100h
+mov bx,0040h;
+mov ax,[bx]; 
+not al;
+mov [0040h+04],ax;
+ret
+```
+## Output
+
+![not](https://github.com/user-attachments/assets/73f48dea-1163-490c-a330-9eca514ee010)
+
+## XOR:
+```
+MOV [SI+2],AX;
+MOV AX,0A32H;
+MOV BX,0B13H;
+XOR AX,BX;
+```
+## Output:
+
+![xor](https://github.com/user-attachments/assets/0316862f-df97-4201-961d-792a538616bf)
 
 ## Result :
-Thus, To write and execute ALP on fundamental arithmetic operations is successful.
-
-
-
-
-
-
-
-
+Thus, to write and execute ALP on fundamental arithmetic operations and Logical operations is successful.
